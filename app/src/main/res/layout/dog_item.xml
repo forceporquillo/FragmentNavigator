@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_root"
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/netflix_sans_medium"
+                android:text="Havanese Dog"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/netflix_sans_light"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Lorem Ipsum is simply dummy"
+                android:textColor="@color/white" />
+
+            <RatingBar
+
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="8dp"
+                android:rating="4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/netflix_sans_medium"
+                android:id="@+id/dog_price"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-20dp"
+        android:alpha=".1"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="360dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="-8dp"
+        android:alpha=".1"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="360dp" />
+
+    <ImageView
+        android:id="@+id/dog_image"
+        android:layout_marginTop="-10dp"
+        android:layout_width="220dp"
+        android:layout_height="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:scaleType="center" />
+
+</androidx.cardview.widget.CardView>

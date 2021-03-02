@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item0"
+        android:icon="@drawable/dog_paw_48"
+        android:title="Golden" />
+
+    <item
+        android:id="@+id/item1"
+        android:icon="@drawable/dog_paw_48"
+        android:title="Pug" />
+
+    <item
+        android:id="@+id/item3"
+        android:icon="@drawable/dog_paw_48"
+        android:title="Havanese" />
+
+    <item
+        android:id="@+id/item4"
+        android:icon="@drawable/dog_paw_48"
+        android:title="Chow" />
+
+</menu>

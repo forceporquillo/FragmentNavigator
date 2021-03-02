@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:elevation="0dp"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:navigationIcon="@drawable/ic_hamburger"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="0dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="360dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:background="@drawable/tucker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/netflix_sans_medium"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_for_a_pet" />
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F6F6F6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="25dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:queryHint="Search"
+                android:focusable="true"
+                app:queryBackground="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_below="@id/search"
+        android:layout_above="@id/separator"
+        android:id="@+id/container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:alpha=".4"
+        android:background="#B5B5B5"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/menu_bottom"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/bottom_nav_color_state"
+        app:itemTextColor="@drawable/bottom_nav_color_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Widget.Design.BottomNavigationView"/>
+
+</RelativeLayout>
