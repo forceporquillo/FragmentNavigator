@@ -41,9 +41,14 @@ class FragmentNavigator private constructor(
         }
     }
 
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    fun onPause() {
+        saveState()
+    }
+
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onDestroy() {
-        saveIntent.putExtra(KEY_ID, keyId)
+       saveState()
     }
 
     fun navigate(keyId: Int) {
@@ -51,6 +56,10 @@ class FragmentNavigator private constructor(
             setFragmentDestination(keyId)
             this.keyId = keyId
         }
+    }
+
+    private fun saveState() {
+        saveIntent.putExtra(KEY_ID, keyId)
     }
 
     private fun setFragmentDestination(keyId: Int) {
